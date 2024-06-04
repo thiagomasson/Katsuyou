@@ -1,0 +1,395 @@
+﻿/***********************************************************
+  CSS 
+
+***********************************************************/
+
+* {
+    -webkit-box-sizing: border-box !important; /* Safari/Chrome */
+    -moz-box-sizing: border-box !important; /* Firefox */
+    box-sizing: border-box !important; /* IE8+/ Opera */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 150%;
+    background-color: #131415;
+    color: lightcyan;
+}
+
+.content-wrap {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.header {
+    margin: auto;
+    height: 64px;
+    width: 80%;
+    /* allows ABSOLUTE positions on header elements */
+    position: relative;
+    border-bottom: 2px outset #2a499e;
+    border-left: 2px outset #2a499e;
+    border-right: 2px outset #2a499e;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #2a499e;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 64px;
+    padding: 8px;
+}
+
+.title-bar {
+    position: absolute;
+    top: 0px;
+    left: 64px;
+    right: 0px;
+    height: 40px;
+}
+
+    .title-bar a {
+        padding-bottom: 4px;
+        border-bottom: 3px solid transparent;
+    }
+
+        .title-bar a:hover {
+            color: azure;
+            border-bottom: 3px solid #26a69a;
+            box-shadow: 0 2px 0 #fce438;
+        }
+
+.title {
+    color: azure;
+    font-size: 32px;
+    position: absolute;
+    padding: 8px;
+}
+
+.menu-bar {
+    position: absolute;
+    left: 81px;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    text-align: right;
+}
+
+    .menu-bar a {
+        color: azure;
+        font-size: 14px;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding-bottom: 2px;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+    }
+
+        .menu-bar a:hover {
+            color: azure;
+            border-bottom: 3px solid #26a69a;
+            box-shadow: 0 2px 0 #fce438;
+        }
+
+.conteudo {
+    margin-bottom: 64px
+}
+
+.footer {
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(30,133,123,255);
+    color: azure;
+    text-align: center;
+    margin-top: 32px;
+    padding: 0px 16px;
+    border: 2px outset rgba(30,133,123,255);
+    border-radius: 4px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .footer a {
+        color: azure;
+    }
+
+        .footer a:hover {
+            color: #355bc6;
+        }
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+/**************************************** 
+    COLUMNS LAYOUT
+*****************************************/
+/* ROW */
+.row {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-11 {
+    width: 91.66666666%;
+}
+
+.col-10 {
+    width: 83.3333333%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-2 {
+    width: 16.66666667%;
+}
+
+.col-1 {
+    width: 8.33333333%;
+}
+
+[class^="col-"] {
+    margin-bottom: 16px;
+}
+
+.box {
+    padding: 14px;
+    height: 100%;
+}
+
+.border {
+    border: 2px outset #444a4d !important;
+    border-radius: 4px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.margin-top-16-important {
+    margin-top: 16px !important;
+}
+
+.margin-top-32 {
+    margin-top: 32px;
+}
+
+.margin-top-60 {
+    margin-top: 60px;
+}
+
+.margin-top-120 {
+    margin-top: 120px;
+}
+
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.min-height-400 {
+    min-height: 400px;
+}
+
+
+/*******************************************************************
+    FORMS CONTROLS
+********************************************************************/
+
+
+hr {
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid;
+    border-top-color: #bbbbbb;
+    width: 100%;
+    display: inline-block;
+}
+
+label {
+    margin-top: 8px;
+    display: block;
+    max-width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    border: 1px solid #444a4d;
+    border-radius: 4px;
+    background: #161819;
+    color: rgba(200,200,200,1);
+    font-size: 16px;
+    padding: 4px;
+    width: 100%;
+    resize: none;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+    margin: 2px;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    color: white;
+    background-color: #355bc6;
+    font-size: 16px;
+    padding: 0px 10px;
+    min-width: 80px;
+}
+
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    button:hover {
+        background-color: #293b90;
+        color: white;
+    }
+
+.send-button {
+    font-weight: bold;
+    min-height: 40px;
+    min-width: 100px;
+}
+
+/*******************************************************************
+LAYOUT DE MíDIAS
+tem que ser as ultimas definições
+********************************************************************/
+@media only screen and (max-width: 768px) {
+
+    /* 
+        SELETORES DE ATRIBUTOS [] 
+        https://www.w3schools.com/css/css_attribute_selectors.asp 
+    */
+
+    [class^="col-"] {
+        width: 100%;
+    }
+
+    [class=content-wrapper] {
+        padding: 0px;
+        margin: 6px;
+    }
+
+    [class*="box-border"] {
+        border: 0px;
+        padding: 0px;
+    }
+
+    [class*="box-padding-16"] {
+        border: 0px;
+        padding: 0px;
+    }
+
+    [class=dp-hr] {
+        display: inline-block;
+    }
+
+    /* FORMS ****************/
+
+    .form-input {
+        border: 0px;
+        padding: 0px;
+        padding-top: 20px;
+        /*border-radius: 0;*/
+    }
+
+    .form-view {
+        border: 0px;
+        padding: 0px;
+        padding-top: 1px;
+        /*border-radius: 0;*/
+    }
+
+        .form-view .ht {
+            display: none;
+        }
+
+    .side-panel {
+        padding-left: 0 !important;
+    }
+
+    /* MENU RESPONSIVO ****************/
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile-buttons {
+        display: inline-block;
+    }
+
+    .logotype {
+        float: right;
+    }
+
+    [class=logotype-img] {
+        max-width: 240px;
+    }
+}
+
+/* CONFIGURAÇÃO DA IMPRESSÃO */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #Printable * {
+        visibility: visible;
+    }
+}
